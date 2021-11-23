@@ -11,8 +11,11 @@ The Mandelbrot set is created with the following function <img src="https://rend
 
 ### Explanation
 https://www.youtube.com/watch?v=FFftmWSzgmk
+
 https://www.youtube.com/watch?v=7MotVcGvFMg
+
 https://www.youtube.com/watch?v=7MotVcGvFMg&list=TLPQMjIxMTIwMjFdXkOetTn_rA&index=1
+
 https://www.youtube.com/watch?v=6IWXkV82oyY
 
 ### Mini Documentary

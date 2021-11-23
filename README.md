@@ -20,3 +20,6 @@ https://www.youtube.com/watch?v=6IWXkV82oyY
 
 ### Mini Documentary
 https://www.youtube.com/watch?v=56gzV0od6DU
+
+### Interactive Mandelbrot set, this is also the desired outcome of this project.
+https://www.google.com/fbx?fbx=mandelbrot_explorer&hl=en

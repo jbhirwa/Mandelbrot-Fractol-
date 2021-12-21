@@ -9,7 +9,10 @@ The Mandelbrot set is created with the following function <img src="https://rend
 
 *(figure two)*
 
-### Explanation
+# Understanding the 42 MLX library
+It is be best to start off with the first link as it does a decent job of introducing the main functions of the mlx library, as well as, walk you through some very simple programs. The second link is a big link dump to resources to almost any problem you might face, but it also has the man for most of the functions. The last two are mini projects walkthroughs, they were extremely helpful once I had a decent understanding of the functions.
+
+### Mandelbrot Explanation
 https://www.youtube.com/watch?v=FFftmWSzgmk
 
 https://www.youtube.com/watch?v=7MotVcGvFMg
@@ -23,3 +26,11 @@ https://www.youtube.com/watch?v=56gzV0od6DU
 
 ### Interactive Mandelbrot set, this is also the desired outcome of this project.
 https://www.google.com/fbx?fbx=mandelbrot_explorer&hl=en
+
+### Understanding the mlx library
+https://harm-smits.github.io/42docs/libs/minilibx/colors.html
+https://github.com/qst0/ft_libgfx#the-graphics-branch
+
+### mlx mini projects 
+https://giters.com/S-LucasSerrano/miniLibX_sample
+https://giters.com/keuhdall/images_example

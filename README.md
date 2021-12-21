@@ -29,8 +29,10 @@ https://www.google.com/fbx?fbx=mandelbrot_explorer&hl=en
 
 ### Understanding the mlx library
 https://harm-smits.github.io/42docs/libs/minilibx/colors.html
+
 https://github.com/qst0/ft_libgfx#the-graphics-branch
 
 ### mlx mini projects 
 https://giters.com/S-LucasSerrano/miniLibX_sample
+
 https://giters.com/keuhdall/images_example

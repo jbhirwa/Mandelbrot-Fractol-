@@ -1,55 +1,25 @@
-#include "mlx.h"
+#include "fractol.h"
 #include <stdlib.h>
 #include <stdio.h>
 
-typedef struct	s_program
- {
-	void	*mlx;
-	void	*win;
-	void	*img;
-}				t_program;
-
-int	mouse_zoom(int keycode, int x, int y)
+static int	select_fractol(char *argv, t_central *central) 
 {
-	printf("Keycode: %d\nx: %d\ny: %d\n", keycode, x, y);
-	return (0);
+	central->fractol.type = 0;
+	if (ft_strequ(ft_str_to_lowercase(argv), "mandelbrot"))
+		central->fractol.type = 1;
+	printf("%d \n\n", central->fractol.type);
+	return(central->fractol.type);
 }
 
-int close(int keycode, t_program *vars)
+int main(int argc, char **argv)
 {
-	static int hor = 0;
-	static int ver = 0;
-	if(keycode == 123 || keycode == 124 || keycode == 125 || keycode == 126)
-		mlx_clear_window(vars->mlx, vars->win);
-	if (keycode == 53)
+	t_central	*central;
+	if (argc == 2)	
 	{
-		mlx_destroy_window(vars->mlx, vars->win);
-		exit(0);
+		if (!(central = (t_central *)malloc(sizeof(central))))
+			printf("unsuccess\n\n");
+		if (!(select_fractol(argv[1], central)))
+			printf("try again\n\n");
 	}
-	if (keycode == 124)
-		mlx_put_image_to_window(vars->mlx, vars->win, vars->img, hor +=10, ver);
-	if (keycode == 123)
-		mlx_put_image_to_window(vars->mlx, vars->win, vars->img, hor -=10, ver);
-	if (keycode == 126)
-		mlx_put_image_to_window(vars->mlx, vars->win, vars->img, hor, ver -=10);
-	if (keycode == 125)
-		mlx_put_image_to_window(vars->mlx, vars->win, vars->img, hor, ver +=10);
 	return (0);
-}
-
-int main(void)
-{
-	t_program vars;
-	char	*file = "./Srcs/sample.xpm";
-	int		img_width;
-	int		img_height;
-
-	vars.mlx = mlx_init();
-	vars.win = mlx_new_window(vars.mlx, 1000, 1000, "keyboard");
-	vars.img = mlx_xpm_file_to_image(vars.mlx, file, &img_width, &img_height);
-	mlx_put_image_to_window(vars.mlx, vars.win, vars.img, 0, 0);
-	mlx_hook(vars.win, 2, 1L<<0, close, &vars);
-	mlx_mouse_hook(vars.win, &mouse_zoom, NULL);
-	mlx_loop(vars.mlx);	
-
 }

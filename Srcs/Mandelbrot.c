@@ -59,7 +59,8 @@ t_complex square(t_complex Zcmpx, t_complex Ccmpx)// z then c
  *converts the value of x into the "a" component of the complex number c.
  *- c.b is similar except, "c.b = ((double)y -(window_height/2))/(window_height/4)",
  *converts the value of y into the "b" component of the complex number c.
- *- The while loop calculates whether the result of z is in the mandelbrot set
+ *- The while loop calculates whether the result of z is in the mandelbrot set after
+ *a number of iterations(50)
  */
 void	Mandelbrot(t_data *img)
 {

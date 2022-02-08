@@ -43,28 +43,36 @@ typedef struct	s_complex
 	double	b;
 }				t_complex;
 
-t_complex square(t_complex cmpx, t_complex Zcmpx)
+t_complex square(t_complex Zcmpx, t_complex Ccmpx)// z then c
 {
 	double	temp;
 	
-	temp = (cmpx.a * cmpx.a) - (cmpx.b * cmpx.b) + Zcmpx.a ;
-	cmpx.b = 2.0 * cmpx.a * cmpx.b + Zcmpx.b;
-	cmpx.a = temp;
-	return(cmpx);
+	temp = (Zcmpx.a * Zcmpx.a) - (Zcmpx.b * Zcmpx.b) + Ccmpx.a ;
+	Zcmpx.b = 2.0 * Zcmpx.a * Zcmpx.b + Ccmpx.b;
+	Zcmpx.a = temp;
+	return(Zcmpx);
 }
 
+/*- x and y represent the pixel coordinates
+ *- c and z are complex numbers each with an "a" and "b" component
+ *- This formular "c.a = ((double)x -(window_ width/2))/(window_width/4)", 
+ *converts the value of x into the "a" component of the complex number c.
+ *- c.b is similar except, "c.b = ((double)y -(window_height/2))/(window_height/4)",
+ *converts the value of y into the "b" component of the complex number c.
+ *- The while loop calculates whether the result of z is in the mandelbrot set
+ */
 void	Mandelbrot(t_data *img)
 {
 	int	x = 0;//
 	int	y = 0;//
-	t_complex	c;//
+	t_complex	c;//this will represent the pixel coordinates
 	t_complex	z;//
 
 	for (x = 0; x < 1080; x++)	
 	{
 		for (y = 0; y < 1080; y++)
 		{	
-			c.a = ((double)x -(1080/2))/(1080/4);		//a
+			c.a = ((double)x -(1080/2))/(1080/4);	//a
 			c.b = ((double)y -(1080/2))/(1080/4);	//b
 			z.a = 0.0;
 			z.b = 0.0;

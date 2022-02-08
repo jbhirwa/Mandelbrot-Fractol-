@@ -66,15 +66,15 @@ void	Mandelbrot(t_data *img)
 {
 	int	x = 0;//
 	int	y = 0;//
-	t_complex	c;//this will represent the pixel coordinates
+	t_complex	c;//
 	t_complex	z;//
 
 	for (x = 0; x < 1080; x++)	
 	{
 		for (y = 0; y < 1080; y++)
 		{	
-			c.a = ((double)x -(1080/2))/(1080/4);	//a
-			c.b = ((double)y -(1080/2))/(1080/4);	//b
+			c.a = ((double)x -(1080/2))/(1080/4);
+			c.b = ((double)y -(1080/2))/(1080/4);
 			z.a = 0.0;
 			z.b = 0.0;
 			int it = 0;
@@ -84,7 +84,6 @@ void	Mandelbrot(t_data *img)
 				my_mlx_pixel_put(img, x, y, 0x00FF0000);
 		}
 	}
-	//return (it);
 }
 
 int	main(void)

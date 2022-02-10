@@ -6,8 +6,8 @@ int	main(void)
 	t_program	vars;
 
 	vars.mlx_pointer = mlx_init();
-	vars.window = mlx_new_window(vars.mlx_pointer, 1920, 1080, "Hello world!");
-	img.img = mlx_new_image(vars.mlx_pointer, 1920, 1080);
+	vars.window = mlx_new_window(vars.mlx_pointer, WIDTH, HEIGHT, "Hello world!");
+	img.img = mlx_new_image(vars.mlx_pointer, WIDTH, HEIGHT);
 	img.addr = mlx_get_data_addr(img.img, &img.bits_per_pixel, &img.line_length,
 								&img.endian);
 	Mandelbrot(&img);

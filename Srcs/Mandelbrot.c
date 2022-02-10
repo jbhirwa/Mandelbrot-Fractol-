@@ -21,25 +21,36 @@ t_complex square(t_complex Zcmpx, t_complex Ccmpx)// z then c
  */
 void	Mandelbrot(t_data *img)
 {
+	t_complex		c;//
+	t_complex		z;//
+//	t_fractal_init	f;
+	t_brain			brain;
+
 	int	x = 0;//
 	int	y = 0;//
-	t_complex	c;//
-	t_complex	z;//
-
-	while (x < 1080)
+	brain.f.re_max = 2.0;
+	brain.f.re_min = -2.0;
+	brain.f.im_min = -2.0;
+	brain.f.im_max = brain.f.im_min + (brain.f.re_max - brain.f.re_min) * HEIGHT / WIDTH;
+	brain.f.re_factor = (brain.f.re_max - brain.f.re_min) / (WIDTH- 1);
+	brain.f.im_factor = (brain.f.im_max - brain.f.im_min) / (HEIGHT - 1);
+	while (x < WIDTH)
 	{
 		y = 0;
-		while (y < 1080)
-		{	
-			c.a = ((double)x -(1080/2))/(1080/4);
-			c.b = ((double)y -(1080/2))/(1080/4);
+		while (y < HEIGHT)
+		{		
+
+			c.a = brain.f.re_min + (double)x * brain.f.re_factor;
+			c.b = brain.f.im_max - (double)y * brain.f.im_factor;
 			z.a = 0.0;
 			z.b = 0.0;
 			int it = 0;
-			while (it++ < 100 && (z.a * z.a) + (z.b * z.b) <= 4)
+			while (it++ < MAX_IT && (z.a * z.a) + (z.b * z.b) <= 4)
 					z = square(z, c);
-			if (it >= 99)//
-				my_mlx_pixel_put(img, x, y, 0x00FF0000);
+			if (it >= MAX_IT - 1)//
+				my_mlx_pixel_put(img, x, y, 0xFFFFFFFF);
+			else
+				my_mlx_pixel_put(img, x, y, it*100);
 			y++;
 		}
 		x++;

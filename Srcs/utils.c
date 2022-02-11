@@ -11,10 +11,10 @@ int close_win(int keycode, t_program *vars)
 	return (0);
 }
 
-void	my_mlx_pixel_put(t_data *data, int x, int y, int color)
+void	my_mlx_pixel_put(t_brain *brain, int x, int y, int color)
 {
 	char	*dst;
 
-	dst = data->addr + (y * data->line_length + x * (data->bits_per_pixel / 8));
+	dst = brain->data.addr + (y * brain->data.line_length + x * (brain->data.bits_per_pixel / 8));
 	*(unsigned int*)dst = color;
 }

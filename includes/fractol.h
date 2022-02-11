@@ -22,13 +22,14 @@ typedef struct	s_data {
 	int		bits_per_pixel;
 	int		line_length;
 	int		endian;
+	void	*mlx_pointer;
+	void	*window;
 }				t_data;
 
 typedef struct	s_program
  {
 	void	*mlx_pointer;
 	void	*window;
-	void	*img;
 }				t_program;
 
 typedef struct	s_fractal_init
@@ -49,15 +50,16 @@ typedef struct	s_mouse
 
 typedef struct	s_brain
 {
-	t_complex		fcomplex;
+	t_complex		z;
+	t_complex		c;
 	t_data			data;
 	t_program		program;
 	t_fractal_init	f;
 }				t_brain;
 
 int close_win(int keycode, t_program *vars);
-void	my_mlx_pixel_put(t_data *data, int x, int y, int color);
-void	Mandelbrot(t_data *img);
-t_complex square(t_complex Zcmpx, t_complex Ccmpx);
+void	my_mlx_pixel_put(t_brain *brain, int x, int y, int color);
+void	Mandelbrot(t_brain *brain);
+t_complex square(t_brain brain);
 
 #endif

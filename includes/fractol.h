@@ -22,8 +22,6 @@ typedef struct	s_data {
 	int		bits_per_pixel;
 	int		line_length;
 	int		endian;
-	void	*mlx_pointer;
-	void	*window;
 }				t_data;
 
 typedef struct	s_program

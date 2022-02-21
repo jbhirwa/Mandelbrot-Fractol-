@@ -1,14 +1,17 @@
 #ifndef FRACTOL_H
 # define FRACTOL_H
 
-# define MAX_IT 50
+# define MAX_IT 100
+# define THREADS 8
 # define HEIGHT 1080
 # define WIDTH 1080
 # include <math.h>
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
+# include <pthread.h>
 # include "mlx.h"
+# include "libft.h"
 
 typedef struct	s_complex
 {
@@ -44,6 +47,12 @@ typedef struct	s_mouse
 	double	im;
 }				t_mouse;
 
+typedef struct	s_thread
+{
+	int	start;
+	int end;
+}				t_thread;
+
 typedef struct	s_brain
 {
 	t_complex		z;
@@ -51,6 +60,7 @@ typedef struct	s_brain
 	t_data			data;
 	t_fractal_init	f;
 	t_mouse			m;
+	t_thread		t;
 }				t_brain;
 
 void		init_man(t_brain *brain);
@@ -62,4 +72,9 @@ int			mouse_hook(int mousecode, int x, int y, t_brain *brain);
 void        zoom_control(int key, t_brain *brain);
 double      interpolate(double start, double end, double interp);
 void        apply_zoom(t_brain *brain, double m_re, double m_im, double interp);
+//void		*ft_memcpy(void *dst, const void *src, size_t n);
+void	Julia(t_brain *brain);
+void		init_julia(t_brain *brain);
+
+
 #endif

@@ -1,15 +1,6 @@
 #include "fractol.h"
 
-t_complex square(t_brain brain)// z then c
-{
-	double	temp;
-	temp = (brain.z.a * brain.z.a) - (brain.z.b * brain.z.b) + brain.c.a;
-	brain.z.b = 2.0 * brain.z.a *brain.z.b + brain.c.b;
-	brain.z.a = temp;
-	return(brain.z);
-}
-
-void	Mandelbrot(t_brain *brain)
+void	Julia(t_brain *brain)
 {
 	int	x = 0;//
 	int	y = 0;//
@@ -20,17 +11,18 @@ void	Mandelbrot(t_brain *brain)
 		y = 0;
 		while (y < HEIGHT)
 		{		
-			brain->c.a = brain->f.re_min + (double)x * brain->f.re_factor;
-			brain->c.b = brain->f.im_max - (double)y * brain->f.im_factor;
-			brain->z.a = 0.0;
-			brain->z.b = 0.0;
+			brain->z.a = brain->f.re_min + (double)x * brain->f.re_factor;
+			brain->z.b = brain->f.im_max - (double)y * brain->f.im_factor;
+			brain->c.a = brain->m.re;
+			brain->c.b = brain->m.im;
 			int it = 0;
 			while (it++ <= MAX_IT && (brain->z.a * brain->z.a) + (brain->z.b * brain->z.b) <= 4)
 					brain->z = square(*brain);
 			if (it >= MAX_IT)//
 				my_mlx_pixel_put(brain, x, y, 0xFFFFFFFF);
 			else
-				my_mlx_pixel_put(brain, x, y,400 + 0x0087cefa* it);
+				//my_mlx_pixel_put(brain, x, y,400 + 0x0087cefa* it);
+				my_mlx_pixel_put(brain, x, y, it - (int)brain->z.b*(int)brain->z.a);
 		y++;
 		}
 	x++;

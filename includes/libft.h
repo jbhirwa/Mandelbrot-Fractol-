@@ -6,7 +6,7 @@
 /*   By: jhabaguh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 15:23:39 by jhabaguh          #+#    #+#             */
-/*   Updated: 2022/02/07 15:11:29 by jhabaguh         ###   ########.fr       */
+/*   Updated: 2022/02/21 15:54:30 by jhabaguh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,4 +88,5 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_get_next_line(const int fd, char **line);
 int					ft_linecount(char *str);
+char				*ft_str_to_lowcase(char *str);
 #endif

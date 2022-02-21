@@ -46,8 +46,38 @@ void        zoom_control(int key, t_brain *brain)
 		}
 		mlx_clear_window(brain->data.mlx, brain->data.win);
 	//	mlx_destroy_window(brain->data.mlx, brain->data.win);
-		Mandelbrot(brain);
+
+
+	//Mandelbrot(brain);
+	Julia(brain);
+	mlx_put_image_to_window(brain->data.mlx, brain->data.win, brain->data.img, 0, 0);//
+/*
+	t_brain	brain_tab[THREADS];
+	pthread_t	threads[THREADS];
+	int		i;
+	int		thread_width;
+
+	i = 0;
+	thread_width = WIDTH / THREADS;
+	while (i < THREADS)
+	{
+		ft_memcpy((void*)&brain_tab[i], (void *)brain, sizeof(brain));
+		brain_tab[i].t.start = thread_width * i;
+		brain_tab[i].t.end = thread_width * (i + 1);
+		i++;
+	}
+	i = 0;
+	while (i < THREADS)
+	{
+		pthread_create(&threads[i], NULL, (void *)Mandelbrot, &brain_tab[i]);
+		i += 1;
+	}
+	while (i--)
+	{
+		pthread_join(threads[i], NULL);
 		mlx_put_image_to_window(brain->data.mlx, brain->data.win, brain->data.img, 0, 0);//
+	}
+*/
 	}
 }
 
@@ -73,3 +103,32 @@ void		init_man(t_brain *brain)
 	brain->f.im_min = -2.0;//
 	brain->f.im_max = brain->f.im_min + (brain->f.re_max - brain->f.re_min) * HEIGHT / WIDTH;//	
 }
+
+void		init_julia(t_brain *brain)
+{
+	brain->f.re_max = 2.0;//
+	brain->f.re_min = -2.0;//
+	brain->f.im_min = -2.0;//
+	brain->f.im_max = brain->f.im_min + (brain->f.re_max - brain->f.re_min) * HEIGHT / WIDTH;//	
+	brain->m.re = -0.70176;
+	brain->m.im = -0.38842;
+}
+
+/*
+void	*ft_memcpy(void *dst, const void *src, size_t n)
+{
+	unsigned char	*src2;
+	unsigned char	*dst2;
+	size_t			i;
+
+	src2 = (unsigned char *)src;
+	dst2 = (unsigned char *)dst;
+	i = 0;
+	while (i < n)
+	{
+		dst2[i] = src2[i];
+		i++;
+	}
+	return (dst);
+}
+*/

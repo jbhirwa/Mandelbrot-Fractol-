@@ -1,7 +1,7 @@
 #ifndef FRACTOL_H
 # define FRACTOL_H
 
-# define MAX_IT 100
+# define MAX_IT 1000
 # define THREADS 8
 # define HEIGHT 1080
 # define WIDTH 1080
@@ -11,7 +11,6 @@
 # include <stdlib.h>
 # include <pthread.h>
 # include "mlx.h"
-# include "libft.h"
 
 typedef struct	s_complex
 {
@@ -23,11 +22,12 @@ typedef struct	s_data
 {
 	void	*img;
 	char	*addr;
-	int		bits_per_pixel;
+	int		bpp;
 	int		line_length;
 	int		endian;
 	void	*mlx;//
 	void	*win;//
+	int		type;
 }				t_data;
 
 typedef struct	s_fractal_init
@@ -57,24 +57,26 @@ typedef struct	s_brain
 {
 	t_complex		z;
 	t_complex		c;
-	t_data			data;
+	t_data			d;
 	t_fractal_init	f;
 	t_mouse			m;
 	t_thread		t;
 }				t_brain;
 
-void		init_man(t_brain *brain);
 int			close_win(int keycode, t_brain *brain);
 void		my_mlx_pixel_put(t_brain *brain, int x, int y, int color);
-void		Mandelbrot(t_brain *brain);
+void		fractol(t_brain *brain);
 t_complex	square(t_brain brain);
 int			mouse_hook(int mousecode, int x, int y, t_brain *brain);
 void        zoom_control(int key, t_brain *brain);
 double      interpolate(double start, double end, double interp);
 void        apply_zoom(t_brain *brain, double m_re, double m_im, double interp);
-//void		*ft_memcpy(void *dst, const void *src, size_t n);
-void	Julia(t_brain *brain);
-void		init_julia(t_brain *brain);
-
-
+int			ft_strequ(char const *s1, char const *s2);
+char		*ft_str_to_lowcase(char *str);
+int			ft_strcmp(const char *s1, const char *s2);
+int 		fractal_select(char *type, t_brain *brain);
+void 		menu(void);
+void		init_fractol(t_brain *brain);
+void 		fixed_julia(t_brain *brain);
+void 		init_c_and_z(t_brain *brain, int x, int y);
 #endif

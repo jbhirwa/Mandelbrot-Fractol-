@@ -79,4 +79,5 @@ void 		menu(void);
 void		init_fractol(t_brain *brain);
 void 		fixed_julia(t_brain *brain);
 void 		init_c_and_z(t_brain *brain, int x, int y);
+int			move_image(int keycode, t_brain *brain);
 #endif

@@ -43,6 +43,7 @@ void menu(void)
 	printf("	3	-julia explore\n");
 	printf("	4	-burning ship\n");
 	printf("Make sure your selection is enclosed in double quotes\n\n");
+	printf("Once in the program, to change the fractal you can press\nthe number corresponding to it.\n\n");
 }
 
 int fractal_select(char *type, t_brain *brain)

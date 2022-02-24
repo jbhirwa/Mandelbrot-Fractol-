@@ -9,7 +9,7 @@ int	main(int argc, char **argv)
 		if (brain.d.type >= 1)
 		{
 			brain.d.mlx = mlx_init();//
-			brain.d.win = mlx_new_window(brain.d.mlx, WIDTH, HEIGHT, "Hello world!");//
+			brain.d.win = mlx_new_window(brain.d.mlx, WIDTH, HEIGHT, "Fract-ol");//
 			brain.d.img = mlx_new_image(brain.d.mlx, WIDTH, HEIGHT);
 			brain.d.addr = mlx_get_data_addr(brain.d.img, &brain.d.bpp, &brain.d.line_length, &brain.d.endian);
 			init_fractol(&brain);

@@ -36,13 +36,17 @@ int		ft_strcmp(const char *s1, const char *s2)
 
 void menu(void)
 {
-	printf("\nTo select a fractal, type the name.\n");
+	printf("\nTo select a fractal, type the fractol name after the program name.\n");
 	printf("Example: ./fractol \"mandelbrot\"\n");
-	printf("	1	-mandelbrot\n");
-	printf("	2	-julia fixed\n");
-	printf("	3	-julia explore\n");
-	printf("	4	-burning ship\n");
+	printf("\t1	mandelbrot\n");
+	printf("\t2	julia fixed\n");
+	printf("\t3	julia explore\n");
+	printf("\t4	burning ship\n");
 	printf("Make sure your selection is enclosed in double quotes\n\n");
+	printf("In-program commands\n");
+	printf("\t1\tTo change the fractal you can press the number\n\t\tcorresponding to it.\n");
+	printf("\t2\tIn \"julia explore\" using the arrows changes\n\t\tthe real imaginery part pf the constant.\n");
+	printf("\t3\tTo reset, press the corresponding number.\n");
 }
 
 int fractal_select(char *type, t_brain *brain)

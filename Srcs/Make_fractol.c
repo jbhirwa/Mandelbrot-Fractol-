@@ -24,6 +24,7 @@ void	fractol(t_brain *brain)
 	{
 		y = 0;
 		while (y < HEIGHT)
+	//	while (brain->t.start < brain->t.end)
 		{	
 			init_c_and_z(brain, x, y);
 			int it = 0;
@@ -33,6 +34,7 @@ void	fractol(t_brain *brain)
 				my_mlx_pixel_put(brain, x, y, 0xFFFFFFFF);
 			else
 				my_mlx_pixel_put(brain, x, y,400 + 0x0087cefa* it);
+			//	my_mlx_pixel_put(brain, x, y, it - (int)brain->z.b*(int)brain->z.a);
 		y++;
 		}
 	x++;

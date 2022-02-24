@@ -27,6 +27,7 @@ void        zoom_control(int key, t_brain *brain)
 		}
 		mlx_clear_window(brain->d.mlx, brain->d.win);
 		fractol(brain);
+		//t_fractol(brain);
 		mlx_put_image_to_window(brain->d.mlx, brain->d.win, brain->d.img, 0, 0);//
 	}
 }

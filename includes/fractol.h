@@ -1,7 +1,7 @@
 #ifndef FRACTOL_H
 # define FRACTOL_H
 
-# define MAX_IT 1000
+# define MAX_IT 50
 # define THREADS 8
 # define HEIGHT 1080
 # define WIDTH 1080
@@ -79,4 +79,6 @@ void 		menu(void);
 void		init_fractol(t_brain *brain);
 void 		fixed_julia(t_brain *brain);
 void 		init_c_and_z(t_brain *brain, int x, int y);
+//void		t_fractol(t_brain *brain);
+void reset_and_run(t_brain *brain);
 #endif

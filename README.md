@@ -1,6 +1,7 @@
 To select a fractal, type the fractol name after the program name.
 
 Example: ./fractol "mandelbrot"
+
 	1	mandelbrot
 	
 	2	julia fixed

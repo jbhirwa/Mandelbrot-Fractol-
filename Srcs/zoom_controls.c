@@ -6,7 +6,7 @@
 /*   By: jhabaguh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 11:53:34 by jhabaguh          #+#    #+#             */
-/*   Updated: 2022/02/25 13:15:09 by jhabaguh         ###   ########.fr       */
+/*   Updated: 2022/02/25 13:18:23 by jhabaguh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ double	interpolate(double start, double end, double interp)
 
 size_t	ft_strlen(const char *s)
 {
-	size_t len;
+	size_t	len;
 
 	len = 0;
 	while (s[len])

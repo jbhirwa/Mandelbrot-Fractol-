@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   fractol_select.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jhabaguh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/25 12:03:05 by jhabaguh          #+#    #+#             */
+/*   Updated: 2022/02/25 13:00:45 by jhabaguh         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "fractol.h"
 
-int		ft_strequ(char const *s1, char const *s2)
+int	ft_strequ(char const *s1, char const *s2)
 {
 	if (s1 && s2)
 		if (!ft_strcmp(s1, s2))
@@ -19,7 +31,7 @@ char	*ft_str_to_lowcase(char *str)
 	return (str);
 }
 
-int		ft_strcmp(const char *s1, const char *s2)
+int	ft_strcmp(const char *s1, const char *s2)
 {
 	unsigned char	*us1;
 	unsigned char	*us2;
@@ -34,19 +46,26 @@ int		ft_strcmp(const char *s1, const char *s2)
 	return (*us1 - *us2);
 }
 
-void menu(void)
+void	menu(void)
 {
-	printf("\nTo select a fractal, type the name.\n");
-	printf("Example: ./fractol \"mandelbrot\"\n");
-	printf("	1	-mandelbrot\n");
-	printf("	2	-julia fixed\n");
-	printf("	3	-julia explore\n");
-	printf("	4	-burning ship\n");
-	printf("Make sure your selection is enclosed in double quotes\n\n");
-	printf("Once in the program, to change the fractal you can press\nthe number corresponding to it.\n\n");
+	ft_putendl(NULL);
+	ft_putendl("Type the fractol name after the program name.");
+	ft_putendl("Example: ./fractol \"mandelbrot\"");
+	ft_putendl("	1	mandelbrot");
+	ft_putendl("	2	julia fixed");
+	ft_putendl("	3	julia explore");
+	ft_putendl("	4	burning ship");
+	ft_putendl("Make sure your selection is enclosed in double quotes");
+	ft_putendl(NULL);
+	ft_putendl("In-program commands");
+	ft_putendl("	1	To change the fractal you can press the number");
+	ft_putendl("		corresponding to it.");
+	ft_putendl("	2	In \"julia explore\" using the arrows changes");
+	ft_putendl("		the real imaginery part pf the constant.");
+	ft_putendl("	3	To reset, press the corresponding number.");
 }
 
-int fractal_select(char *type, t_brain *brain)
+int	fractal_select(char *type, t_brain *brain)
 {
 	if (ft_strequ(ft_str_to_lowcase(type), "mandelbrot"))
 		brain->d.type = 1;
@@ -57,9 +76,6 @@ int fractal_select(char *type, t_brain *brain)
 	else if (ft_strequ(ft_str_to_lowcase(type), "burning ship"))
 		brain->d.type = 4;
 	else
-	{
 		menu();
-
-	}
-	return(brain->d.type);	
+	return (brain->d.type);
 }

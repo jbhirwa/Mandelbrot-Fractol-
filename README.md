@@ -18,7 +18,7 @@ In-program commands
 		corresponding to it.
 		
 	2	In "julia explore" using the arrows changes
-		the real imaginery part pf the constant.
+		the real and imaginery part of the constant.
 		
 	3	To reset, press the corresponding number.
 

@@ -67,17 +67,17 @@ https://www.google.com/fbx?fbx=mandelbrot_explorer&hl=en
 ### Implementing fractals 
 https://rosettacode.org/wiki/Mandelbrot_set
 
-https://en.wikipedia.org/wiki/Julia_set
-
 https://www.youtube.com/watch?v=mBg74yR3ZiY&t=1180s
 
 https://www.youtube.com/watch?v=6z7GQewK-Ks&t=612s
 
 https://en.wikipedia.org/wiki/Mandelbrot_set
 
-https://en.wikipedia.org/wiki/Burning_Ship_fractal
-
 https://jonisalonen.com/2013/lets-draw-the-mandelbrot-set/
+
+https://en.wikipedia.org/wiki/Julia_set
+
+https://en.wikipedia.org/wiki/Burning_Ship_fractal
 
 
 

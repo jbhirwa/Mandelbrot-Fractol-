@@ -39,11 +39,13 @@ The Mandelbrot set is created with the following function <img src="https://rend
 *(figure two)*
 
 # Understanding the 42 MLX library
-It is be best to start off with the first link as it does a decent job of introducing the main functions of the mlx library, as well as, walk you through some very simple programs. The second link is a big link dump to resources to almost any problem you might face, but it also has the man for most of the functions. The last two are mini projects walkthroughs, they were extremely helpful once I had a decent understanding of the functions.
+It is be best to start off with the first link as it does a decent job of introducing the main functions of the mlx library, as well as, walk you through some very simple programs. The second link is a big link dump repository of resources to almost any problem you might face, it also has the man for most of the functions. The last two are mini projects walkthroughs, they were extremely helpful once you have a decent understanding of the mlx functions.
 
 # Implementing fractals 
 Wikipedia as well as YouTube have resources or pseudocode you can use to help develop your code. I found that once I implemented The Mandelbrot Set, I only had to make small changes to make the Julia set and burning ship fractal, these changes are explained in their respective wikipedia articles. 
 
+
+### Helpful Links
 
 ### Mandelbrot Explanation
 https://www.youtube.com/watch?v=FFftmWSzgmk
@@ -60,15 +62,24 @@ https://www.youtube.com/watch?v=56gzV0od6DU
 ### Interactive Mandelbrot set, this is also the desired outcome of this project.
 https://www.google.com/fbx?fbx=mandelbrot_explorer&hl=en
 
-### Implementing fractals 
 
+
+### Implementing fractals 
 https://rosettacode.org/wiki/Mandelbrot_set
+
 https://en.wikipedia.org/wiki/Julia_set
+
 https://www.youtube.com/watch?v=mBg74yR3ZiY&t=1180s
+
 https://www.youtube.com/watch?v=6z7GQewK-Ks&t=612s
+
 https://en.wikipedia.org/wiki/Mandelbrot_set
+
 https://en.wikipedia.org/wiki/Burning_Ship_fractal
+
 https://jonisalonen.com/2013/lets-draw-the-mandelbrot-set/
+
+
 
 ### Understanding the mlx library
 https://harm-smits.github.io/42docs/libs/minilibx/colors.html

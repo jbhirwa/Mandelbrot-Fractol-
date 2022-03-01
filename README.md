@@ -1,4 +1,6 @@
 # Compilation and Program information
+Use "make" to compile the program.
+
 To select a fractal, type the fractol name after the program name.
 
 Example: ./fractol "mandelbrot"

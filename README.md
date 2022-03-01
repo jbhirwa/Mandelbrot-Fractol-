@@ -62,7 +62,15 @@ https://www.youtube.com/watch?v=56gzV0od6DU
 ### Interactive Mandelbrot set, this is more or less one the desired outcome of this project.
 https://www.google.com/fbx?fbx=mandelbrot_explorer&hl=en
 
+### Understanding the mlx library
+https://harm-smits.github.io/42docs/libs/minilibx/colors.html
 
+https://github.com/qst0/ft_libgfx#the-graphics-branch
+
+### Mlx mini projects 
+https://giters.com/S-LucasSerrano/miniLibX_sample
+
+https://giters.com/keuhdall/images_example
 
 ### Implementing fractals 
 https://rosettacode.org/wiki/Mandelbrot_set
@@ -78,15 +86,3 @@ https://en.wikipedia.org/wiki/Mandelbrot_set
 https://en.wikipedia.org/wiki/Julia_set
 
 https://en.wikipedia.org/wiki/Burning_Ship_fractal
-
-
-
-### Understanding the mlx library
-https://harm-smits.github.io/42docs/libs/minilibx/colors.html
-
-https://github.com/qst0/ft_libgfx#the-graphics-branch
-
-### Mlx mini projects 
-https://giters.com/S-LucasSerrano/miniLibX_sample
-
-https://giters.com/keuhdall/images_example

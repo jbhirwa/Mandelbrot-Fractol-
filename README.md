@@ -45,7 +45,7 @@ It is be best to start off with the first link as it does a decent job of introd
 Wikipedia as well as YouTube have resources or pseudocode you can use to help develop your code. I found that once I implemented The Mandelbrot Set, I only had to make small changes to make the Julia set and burning ship fractal, these changes are explained in their respective wikipedia articles. 
 
 
-### Helpful Links
+# Helpful Links
 
 ### Mandelbrot Explanation
 https://www.youtube.com/watch?v=FFftmWSzgmk
@@ -86,7 +86,7 @@ https://harm-smits.github.io/42docs/libs/minilibx/colors.html
 
 https://github.com/qst0/ft_libgfx#the-graphics-branch
 
-### mlx ##mini projects 
+### Mlx mini projects 
 https://giters.com/S-LucasSerrano/miniLibX_sample
 
 https://giters.com/keuhdall/images_example

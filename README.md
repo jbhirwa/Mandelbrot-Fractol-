@@ -26,7 +26,6 @@ In-program commands
 	3	To reset, press the corresponding number.
 
 
-
 # What is the Mandelbrot set?
 The Mandelbrot set is created with the following function <img src="https://render.githubusercontent.com/render/math?math=f(z)%20=%20z^{2}%20%2B%20c">, here c and z are complex numbers. C represents the current point on the complex plane that we want to know if it is in the Mandelbrot Set. For C to be within The Mandelbrot Set it needs to remain stable within a max number of iterations, after which, that point will be colored black. Stability is determined by assessing whether or not the current z value when squared and then square rooted is not greater than 2, if so, usually you would stop iterating the function. Points that don’t iterate to the max iteration are given a color according to how fast they stopped iterating, resulting in the patterns and colorfulness of fractals (figure one). Most complex numbers within the Mandelbrot set stabilise within 50 iterations, as shown with figure two. For further information please watch the videos from the links found at the bottom of this document.
 
